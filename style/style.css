@@ -1,0 +1,198 @@
+/* 포장용 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    align-items: center;
+    text-decoration: none;
+}
+
+.contenter {
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 200px;
+    height: 100px;
+}
+
+header .logo img {
+    width: 200px;
+    height: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background: linear-gradient(90deg, #4e54c8, #8f94fb); 그라데이션 */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative;
+    padding-top: 10px;
+}
+
+.nav-item>a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-item>a:hover {
+    color: #529e25;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f3ad52;
+    transform: scale(1.1);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown li {
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown li a:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-bu {
+    width: 130px;
+    height: 48px;
+    border-radius: 3012px;
+    background-color: #e7e7e7;
+    border: 1px solid rgb(255, 191, 73);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.Packaging {
+    width: 83px;
+    border-radius: 3012px;
+    font-weight: 600px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #f3ad52;
+    color: white;
+    cursor: pointer;
+}
+
+.Hall {
+    width: 60px;
+    margin-left: 4px;
+    color: rgb(88, 88, 88);
+    font-weight: 500px;
+    cursor: pointer;
+    position: relative;
+    line-height: 44px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1100; /* 햄버거 버튼도 앞으로 튀어나오게 설정 */
+}
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* 사이드바 숨기기 및 햄버거로 대체 */
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+.slider {
+    height: 400px;
+}
+
+.container {
+    height: 600px;
+}
+
+footer {
+    height: 200px;
+}
